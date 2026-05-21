@@ -1,0 +1,23 @@
+# Виртуальное окружение
+venv/
+
+# Переменные окружения (секреты)
+.env
+
+# База данных
+*.sqlite3
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Медиафайлы
+media/
+
+# Статика
+staticfiles/
+
+# IDE
+.vscode/
+.idea/
