@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+actor Покупатель
+actor Администратор
+actor "Платежный сервис" as payment
+
+rectangle "Интернет-магазин" {
+    usecase "BUC-001\nПродажа валюты" as BUC001
+    usecase "BUC-004\nРегистрация / Логин" as BUC004
+    usecase "BUC-005\nУправление профилем" as BUC005
+    usecase "BUC-002\nУправление ассортиментом" as BUC002
+    usecase "BUC-003\nОбработка заказов" as BUC003
+}
+
+Покупатель --> BUC001
+Покупатель --> BUC004
+Покупатель --> BUC005
+Администратор --> BUC002
+Администратор --> BUC003
+BUC001 ..> payment : payment
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+actor Администратор
+participant "React SPA" as react
+participant "ProductViewSet" as viewset
+database PostgreSQL as db
+
+Администратор -> react : Заполнение формы товара
+react -> viewset : POST /api/products/
+viewset -> viewset : Валидация данных
+viewset -> db : INSERT Product
+db --> viewset : Новый товар
+viewset --> react : HTTP 201 Created
+react --> Администратор : Товар успешно создан
+@enduml

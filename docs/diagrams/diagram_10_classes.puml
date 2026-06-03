@@ -1,0 +1,40 @@
+@startuml
+class ProductList {
+    +fetchProducts()
+    +render()
+}
+
+class Axios {
+}
+
+class ProductViewSet {
+    +list()
+    +retrieve()
+    +create()
+    +update()
+    +destroy()
+    +get_queryset()
+}
+
+class ProductSerializer {
+    +validate()
+    +create()
+    +update()
+    +to_representation()
+}
+
+class Product {
+    +id
+    +title
+    +description
+    +price
+    +currency_amount
+    +is_active
+    +created_at
+}
+
+ProductList --> Axios
+Axios --> ProductViewSet
+ProductViewSet --> ProductSerializer
+ProductSerializer --> Product
+@enduml

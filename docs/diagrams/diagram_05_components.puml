@@ -1,0 +1,20 @@
+@startuml
+package "Клиент (Frontend)" {
+    component "React SPA\nReact Router\nAxios\nAuthContext\ninline styles (CSS-in-JS)" as frontend
+    component "Пользовательский браузер\nlocalStorage (JWT-токены)" as browser
+}
+
+package "Сервер (Backend)" {
+    component "Django REST Framework\nViewSets\nSerializers\nPermissions" as drf
+    component "JWT-аутентификация\nSimpleJWT\nAccess Token\nRefresh Token" as jwt
+    component "ORM (Django Models)\nUser\nCategory\nProduct\nCart\nCartItem\nOrder\nOrderItem" as orm
+}
+
+database PostgreSQL as db
+
+frontend --> drf : HTTP/HTTPS\nREST API (JSON)
+frontend --> browser
+drf --> jwt
+drf --> orm
+orm --> db
+@enduml

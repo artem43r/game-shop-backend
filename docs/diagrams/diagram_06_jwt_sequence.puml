@@ -1,0 +1,19 @@
+@startuml
+actor Пользователь
+participant "React SPA" as react
+participant "Django REST API" as django
+database PostgreSQL as db
+
+Пользователь -> react : Ввод логина и пароля
+react -> django : POST /api/auth/login/
+django -> db : Проверка пользователя
+db --> django : Данные пользователя
+django --> react : Access Token + Refresh Token
+react -> react : Сохранение токенов\nв localStorage
+Пользователь -> react : Запрос каталога товаров
+react -> django : GET /api/products/\nAuthorization: Bearer AccessToken
+django -> db : Получение товаров
+db --> django : Список товаров
+django --> react : JSON с товарами
+react --> Пользователь : Отображение каталога
+@enduml
