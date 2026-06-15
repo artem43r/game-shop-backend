@@ -91,10 +91,38 @@ game-shop-backend/
 ## Статистика разработки
 
 
-- Всего коммитов: 13
+- Всего коммитов: 14
 - Период разработки: 21.05.2026 — 04.06.2026
 - Средняя частота: — 6 коммитов/неделю
 
-## Диаграммы
+### Диаграммы
 
-Диаграммы проекта находятся в папке [docs/diagrams/](docs/diagrams/).
+Основные диаграммы (IDEF0, Use Case, Domain Model, ER-диаграмма) приведены в пояснительной записке к курсовому проекту.
+
+| Диаграмма | Файл |
+|---|---|
+| Бизнес-прецеденты (BUC) | [diagram_02_buc.puml](docs/diagrams/diagram_02_buc.puml) |
+| Диаграмма компонентов | [diagram_05_components.puml](docs/diagrams/diagram_05_components.puml) |
+| Схема JWT-аутентификации | [diagram_06_jwt_sequence.puml](docs/diagrams/diagram_06_jwt_sequence.puml) |
+| Последовательность авторизации | [diagram_08_auth_sequence.puml](docs/diagrams/diagram_08_auth_sequence.puml) |
+| Последовательность работы с товаром | [diagram_09_product_sequence.puml](docs/diagrams/diagram_09_product_sequence.puml) |
+| Диаграмма классов | [diagram_10_classes.puml](docs/diagrams/diagram_10_classes.puml) |
+| Диаграмма Ганта | [diagram_11_gantt.jpg](docs/diagrams/diagram_11_gantt.jpg) |
+
+### Таблицы
+
+Основные таблицы (Паспорт проекта, Матрица стейкхолдеров, SWOT-анализ, Спецификации прецедентов, Глоссарий, Бизнес-правила, Физическая модель данных, Эндпоинты API, Параметры JWT, Роли доступа, Результаты тестирования) приведены в пояснительной записке.
+
+Вспомогательные таблицы вынесены в папку [docs/tables/](docs/tables/):
+
+| Таблица | Файл |
+|---|---|
+| Таблица 3 — Бизнес-прецеденты системы (BUC) | [table_03_buc.md](docs/tables/table_03_buc.md) |
+| Таблица 5 — Сравнение подходов к разработке | [table_05_comparison.md](docs/tables/table_05_comparison.md) |
+| Таблицы 6–7 — ROI и затраты на разработку | [table_06_07_roi.md](docs/tables/table_06_07_roi.md) |
+| Таблица 13 — Атрибуты сущностей предметной области | [table_13_attributes.md](docs/tables/table_13_attributes.md) |
+| Таблицы 15–16, 18 — Архитектурные решения и паттерны | [table_15_16_18_architecture.md](docs/tables/table_15_16_18_architecture.md) |
+| Таблицы 19–22 — Структура проекта Django и ORM | [table_19_22_structure.md](docs/tables/table_19_22_structure.md) |
+| Таблицы 25–28 — Потоки JWT-аутентификации | [table_25_28_jwt_flows.md](docs/tables/table_25_28_jwt_flows.md) |
+| Таблицы 31–36 — React: компоненты, маршруты, оптимизация | [table_31_36_react.md](docs/tables/table_31_36_react.md) |
+| Таблицы 41–46 — Установка, конфигурация, управление проектом | [table_41_46_management.md](docs/tables/table_41_46_management.md)
