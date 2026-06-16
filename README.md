@@ -91,7 +91,7 @@ game-shop-backend/
 ## Статистика разработки
 
 
-- Всего коммитов: 14
+- Всего коммитов: 15
 - Период разработки: 21.05.2026 — 04.06.2026
 - Средняя частота: — 6 коммитов/неделю
 
@@ -126,3 +126,27 @@ game-shop-backend/
 | Таблицы 25–28 — Потоки JWT-аутентификации | [table_25_28_jwt_flows.md](docs/tables/table_25_28_jwt_flows.md) |
 | Таблицы 31–36 — React: компоненты, маршруты, оптимизация | [table_31_36_react.md](docs/tables/table_31_36_react.md) |
 | Таблицы 41–46 — Установка, конфигурация, управление проектом | [table_41_46_management.md](docs/tables/table_41_46_management.md)
+
+### Листинги кода (Приложение А)
+
+**А.1 — Модели данных (Django ORM)**
+
+| Файл | Ссылка |
+|---|---|
+| users/models.py — модель User (AbstractUser) | [строки 1–23](https://github.com/artem43r/game-shop-backend/blob/main/users/models.py#L1-L23) |
+| shop/models.py — модели Category и Product | [строки 1–41](https://github.com/artem43r/game-shop-backend/blob/main/shop/models.py#L1-L41) |
+| orders/models.py — Cart, CartItem, Order, OrderItem | [строки 1–125](https://github.com/artem43r/game-shop-backend/blob/main/orders/models.py#L1-L125) |
+
+**А.2 — Сериализаторы (Django REST Framework)**
+
+| Файл | Ссылка |
+|---|---|
+| shop/serializers.py — ProductSerializer | [строки 16–39](https://github.com/artem43r/game-shop-backend/blob/main/shop/serializers.py#L16-L39) |
+| orders/serializers.py — OrderSerializer | [строки 57–68](https://github.com/artem43r/game-shop-backend/blob/main/orders/serializers.py#L57-L68) |
+
+**А.3 — React-компоненты (фронтенд)**
+
+| Файл | Ссылка |
+|---|---|
+| AuthContext.jsx — управление JWT | [строки 1–65](https://github.com/artem43r/game-shop-frontend/blob/main/src/contexts/AuthContext.jsx#L1-L65) |
+| Cart.jsx — корзина и оформление заказа | [src/pages/Cart.jsx](https://github.com/artem43r/game-shop-frontend/blob/main/src/pages/Cart.jsx) |
