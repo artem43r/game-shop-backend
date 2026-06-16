@@ -42,6 +42,6 @@
 | 1 | Django API → React SPA | Любой запрос возвращает HTTP 401 Unauthorized (access-токен истёк) | Interceptor перехватил ошибку |
 | 2 | React SPA (Axios interceptor) | Автоматически отправляет POST /api/auth/token/refresh/ с {refresh} из localStorage | Запрос на обновление отправлен |
 | 3 | Django API | SimpleJWT проверяет refresh-токен, генерирует новый access-токен | Новый access создан |
-| 4 | Django API → React SPA | Ответ 200: {access: '<новый_токен>'} | Клиент обновил access в AuthContext |
+| 4 | Django API → React SPA | Ответ 200: {access: '<новый_токен>'} | Клиент обновил access в localStorage |
 | 5 | React SPA | Повторно выполняет исходный запрос с новым access-токеном | Пользователь не замечает прерывания сессии |
-| 6* | React SPA | Если refresh тоже истёк — очищает AuthContext, перенаправляет на /login | Пользователь выходит из системы |
+| 6* | React SPA | Если refresh тоже истёк — очищает localStorage, перенаправляет на /login | Пользователь выходит из системы |

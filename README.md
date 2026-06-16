@@ -36,6 +36,8 @@ python manage.py runserver
 Swagger UI доступен по адресу: http://localhost:8000/api/docs/
 
 ## Структура проекта
+
+```
 game-shop-backend/
 ├── config/          # Настройки Django (settings, urls, wsgi)
 ├── users/           # Пользователи, JWT-аутентификация, профиль
@@ -44,6 +46,7 @@ game-shop-backend/
 ├── manage.py
 ├── requirements.txt
 └── .env.example
+```
 
 ## API эндпоинты
 
@@ -91,9 +94,9 @@ game-shop-backend/
 ## Статистика разработки
 
 
-- Всего коммитов: 15
+- Всего коммитов: 16
 - Период разработки: 21.05.2026 — 04.06.2026
-- Средняя частота: — 6 коммитов/неделю
+- Средняя частота: 6 коммитов/неделю
 
 ### Диаграммы
 
@@ -141,8 +144,8 @@ game-shop-backend/
 
 | Файл | Ссылка |
 |---|---|
-| shop/serializers.py — ProductSerializer | [строки 16–39](https://github.com/artem43r/game-shop-backend/blob/main/shop/serializers.py#L16-L39) |
-| orders/serializers.py — OrderSerializer | [строки 57–68](https://github.com/artem43r/game-shop-backend/blob/main/orders/serializers.py#L57-L68) |
+| shop/serializers.py — ProductSerializer | [строки 16–30](https://github.com/artem43r/game-shop-backend/blob/main/shop/serializers.py#L16-L30) |
+| orders/serializers.py — OrderSerializer | [строки 57–63](https://github.com/artem43r/game-shop-backend/blob/main/orders/serializers.py#L57-L63) |
 
 **А.3 — React-компоненты (фронтенд)**
 

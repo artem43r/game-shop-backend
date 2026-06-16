@@ -43,9 +43,9 @@
 | Компонент | Файл | Роль во взаимодействии с API |
 |---|---|---|
 | apiClient (Axios instance) | services/api.js | Единая точка выхода всех HTTP-запросов. Содержит baseURL, заголовки по умолчанию и два interceptor |
-| Request Interceptor | services/api.js | Перед каждым запросом читает access-токен из AuthContext и добавляет заголовок Authorization: Bearer <token>. Если токена нет — запрос идёт без заголовка (публичный доступ) |
+| Request Interceptor | services/api.js | Перед каждым запросом читает access-токен из localStorage и добавляет заголовок Authorization: Bearer <token>. Если токена нет — запрос идёт без заголовка (публичный доступ) |
 | Response Interceptor | services/api.js | При получении HTTP 401 автоматически выполняет POST /api/auth/token/refresh/, обновляет access-токен в AuthContext и повторяет исходный запрос. При ошибке refresh — перенаправляет на /login |
-| AuthContext | contexts/AuthContext.jsx | Хранит состояние авторизации (isAuthenticated, user, accessToken). Предоставляет методы login(), logout(). Доступен любому компоненту через хук useAuth() |
+| AuthContext | contexts/AuthContext.jsx | Хранит состояние авторизации (user, loading); сами токены хранятся в localStorage. Предоставляет методы login(), logout(). Доступен любому компоненту через хук useAuth() |
 | Вызовы API | services/api.js | Компоненты обращаются к REST API напрямую через экземпляр apiClient методами api.get(), api.post(), api.patch(), api.delete(). Запросы выполняются внутри хуков useEffect и обработчиков событий. |
 | PrivateRoute | components/PrivateRoute.jsx | HOC-компонент, проверяющий наличие авторизации. Если пользователь не авторизован — перенаправляет на /login. Обёртывает маршруты /cart, /orders, /profile |
 
