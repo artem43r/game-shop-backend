@@ -94,7 +94,7 @@ game-shop-backend/
 ## Статистика разработки
 
 
-- Всего коммитов: 16
+- Всего коммитов: 17
 - Период разработки: 21.05.2026 — 04.06.2026
 - Средняя частота: 6 коммитов/неделю
 
@@ -153,3 +153,7 @@ game-shop-backend/
 |---|---|
 | AuthContext.jsx — управление JWT | [строки 1–65](https://github.com/artem43r/game-shop-frontend/blob/main/src/contexts/AuthContext.jsx#L1-L65) |
 | Cart.jsx — корзина и оформление заказа | [src/pages/Cart.jsx](https://github.com/artem43r/game-shop-frontend/blob/main/src/pages/Cart.jsx) |
+
+## Пояснительная записка
+
+[Пояснительная записка](./docs/Пояснительная%20записка.docx)
